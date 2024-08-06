@@ -72,7 +72,7 @@ class AntrianController extends Controller
         $hariIni = $now->isoFormat('dddd');
 
         if ($poli == 7) {
-            if (!in_array($hariIni, ['Monday', 'Wednesday', 'Thursday'])) {
+            if (!in_array($hariIni, ['Monday', 'Tuesday', 'Wednesday', 'Thursday'])) {
                 return back()->with('error', 'Antrian orthopedi hanya tersedia pada hari Senin, Rabu, dan Kamis.');
             }
 

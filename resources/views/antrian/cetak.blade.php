@@ -26,11 +26,13 @@
                 </div>
 
                 <div style="text-align:center;border-bottom:solid;padding-bottom:1px;">
-                    <h1 style='font-size:50px;' class='fw-bold text-center lh-1'> {{ strtoupper($antrian->jenis_pasien) }} {{ $antrian->nomor_antrian }}
+                    <h1 style='font-size:50px;' class='fw-bold text-center lh-1'>
+                        {{ strtoupper($antrian->jenis_pasien) }} {{ $antrian->nomor_antrian }}
+                        @if ($antrian->poli == 7)
+                            <p style='font-size:16px;' class='pb-2'>Orthopedi {{ $antrian->no_antrian_poli }}</p>
+                        @endif
                 </div>
-                @if ($antrian->poli == 7) <br>
-                <p class="poli">Orthopedi {{ $antrian->no_antrian_poli }}</p>
-                @endif
+
 
                 <div class='text-center pt-1'>
                     <span style="font-size:10px;">Jalan Sultan Mahmud Badaruddin II No. 48</span>
@@ -46,7 +48,8 @@
         window.onload = function() {
             window.print(); // Menampilkan dialog cetak secara otomatis
             window.onafterprint = function() {
-                window.location.href = "{{ url('/') }}"; // Mengarahkan pengguna kembali ke halaman index setelah cetak selesai
+                window.location.href =
+                    "{{ url('/') }}"; // Mengarahkan pengguna kembali ke halaman index setelah cetak selesai
             };
         };
     </script>
