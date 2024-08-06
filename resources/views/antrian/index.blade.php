@@ -44,7 +44,7 @@
                                 <input type="hidden" name="jenis_pasien" value="bpjs">
                                 <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 rounded-lg shadow-md transition duration-300 flex items-center justify-between px-6 my-6">
                                     <span>Ambil Antrian BPJS</span>
-                                    <span class="bg-blue-500 py-1 px-3 rounded-lg text-sm font-bold">{{ $nomorAntrianBPJS }}</span>
+                                    <span class="bg-blue-500 py-1 px-3 rounded-lg text-2xl font-bold">{{ $nomorAntrianBPJS }}</span>
                                 </button>
                             </form>
 
@@ -55,7 +55,7 @@
                                 <input type="hidden" name="poli" value="7">
                                 <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 rounded-lg shadow-md transition duration-300 flex items-center justify-between px-6 my-6">
                                     <span>Ambil Antrian Orthopedi BPJS</span>
-                                    <span class="bg-purple-500 py-1 px-3 rounded-lg text-sm font-bold">{{ $nomorAntrianOrthopedi }}</span>
+                                    <span class="bg-purple-500 py-1 px-3 rounded-lg text-2xl font-bold">{{ $nomorAntrianOrthopedi }}</span>
                                 </button>
                             </form>
                         </div>
@@ -70,7 +70,7 @@
                                 <input type="hidden" name="jenis_pasien" value="umum">
                                 <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-4 rounded-lg shadow-md transition duration-300 flex items-center justify-between px-6 my-6">
                                     <span>Ambil Antrian Umum</span>
-                                    <span class="bg-green-500 py-1 px-3 rounded-lg text-sm font-bold">{{ $nomorAntrianUmum }}</span>
+                                    <span class="bg-green-500 py-1 px-3 rounded-lg text-2xl font-bold">{{ $nomorAntrianUmum }}</span>
                                 </button>
                             </form>
 
@@ -81,7 +81,7 @@
                                 <input type="hidden" name="poli" value="7">
                                 <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-4 rounded-lg shadow-md transition duration-300 flex items-center justify-between px-6 my-6">
                                     <span>Ambil Antrian Orthopedi Umum</span>
-                                    <span class="bg-red-500 py-1 px-3 rounded-lg text-sm font-bold">{{ $nomorAntrianOrthopedi}}</span>
+                                    <span class="bg-red-500 py-1 px-3 rounded-lg text-2xl font-bold">{{ $nomorAntrianOrthopedi}}</span>
                                 </button>
                             </form>
                         </div>
