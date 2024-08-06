@@ -42,4 +42,12 @@
     </div>
     </div>
     </div>
+    <script>
+        window.onload = function() {
+            window.print(); // Menampilkan dialog cetak secara otomatis
+            window.onafterprint = function() {
+                window.location.href = "{{ url('/') }}"; // Mengarahkan pengguna kembali ke halaman index setelah cetak selesai
+            };
+        };
+    </script>
 </body>
