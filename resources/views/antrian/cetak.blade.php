@@ -18,7 +18,7 @@
                 <div class='pt-2 text-center'>
                     <span style='font-weight:bold;font-size:13px;'>Rumah Sakit Umum Daerah</span>
                     <br />
-                    <span style='font-weight:bold;font-size:14px;'>Dr. M. H. Rabain</span>
+                    <span style='font-weight:bold;font-size:14px;'>Dr. H. Mohamad Rabain</span>
                 </div>
 
                 <div style="text-align:center;border-bottom:solid;padding-bottom:1px">
