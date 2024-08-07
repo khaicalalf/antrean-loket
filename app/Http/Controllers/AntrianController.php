@@ -70,20 +70,20 @@ class AntrianController extends Controller
         }
 
         $hariIni = $now->isoFormat('dddd');
-
+        $tanggalHariIni = $now->format('Y-m-d');
         if ($poli == 7) {
             if (!in_array($hariIni, ['Monday', 'Tuesday', 'Wednesday', 'Thursday'])) {
                 return back()->with('error', 'Antrian orthopedi hanya tersedia pada hari Senin, Rabu, dan Kamis.');
             }
 
-            $antrianOrthoCount = Antrian::where('poli', 7)->count();
+            $antrianOrthoCount = Antrian::where('poli', 7)->whereDate('created_at', $tanggalHariIni)->count();
             if ($antrianOrthoCount >= 27) {
                 return back()->with('error', 'Antrian orthopedi sudah penuh.');
             }
-            $nomorAntrian = Antrian::where('jenis_pasien', $jenisPasien)->max('nomor_antrian') + 1;
+            $nomorAntrian = Antrian::where('jenis_pasien', $jenisPasien)->whereDate('created_at', $tanggalHariIni)->max('nomor_antrian') + 1;
             $noAntrianPoli = $antrianOrthoCount + 19; // Mulai dari nomor 19
         } else {
-            $nomorAntrian = Antrian::where('jenis_pasien', $jenisPasien)->max('nomor_antrian') + 1;
+            $nomorAntrian = Antrian::where('jenis_pasien', $jenisPasien)->whereDate('created_at', $tanggalHariIni)->max('nomor_antrian') + 1;
             $noAntrianPoli = null;
         }
 
